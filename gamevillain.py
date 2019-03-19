@@ -1226,5 +1226,5 @@ def get_xp(user_id: int):
         return users[user_id]['xp']
     else:
         return 0
-                                                                                                                                                                                        
+
 client.run(os.getenv('Token'))
