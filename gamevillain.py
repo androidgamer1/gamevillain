@@ -352,18 +352,15 @@ async def help(ctx):
         embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
         embed.set_author(name='My prefix is G! and here are the help information!')
         embed.set_image(url = 'https://image.ibb.co/caM2BK/help.gif')
-        embed.add_field(name = 'Having doubts? Join our server and clear your doubts. Server link:',value ='https://discord.gg/sYy9xBK',inline = False)
+        embed.add_field(name = 'Having doubts? Join our server and clear your doubts. Server link:',value ='https://discord.gg/yNwVSNQ',inline = False)
         embed.add_field(name = 'React with 🇲 ',value ='click it to see the commands',inline = False)
-        embed.add_field(name = 'React with 🇬 ',value ='click it to see the rest of the commands',inline = False)
-        embed.add_field(name = 'React with 🎦 ',value ='click it to see the rest of the commands',inline = False)
+        embed.add_field(name = 'React with 🇬 ',value ='click it to see the rest of the commands',inline = False
         embed.add_field(name = 'Thanks to Darklegends',value =' He teached me that how to make reaction help :)',inline = False)
         dmmessage = await client.send_message(author,embed=embed)
         reaction1 = '🇲'
         reaction2 = '🇬'
-        reaction3 = '🎦'
         await client.add_reaction(dmmessage, reaction1)
         await client.add_reaction(dmmessage, reaction2)
-        await client.add_reaction(dmmessage, reaction3)
         await client.say('📨 Check DMs For Information')
                                                                                                                                                                                                                                                                                                         
 @client.event
@@ -377,27 +374,15 @@ async def on_reaction_add(reaction, user):
             embed.add_field(name = 'G!jointest (admin is required)',value =' G!jointest',inline = False)
             embed.add_field(name = 'G!lock',value ='G!lock',inline = False)
             embed.add_field(name = 'G!unlock',value ='like G!unlock',inline = False)
-            
+     
             embed.add_field(name = 'G!dm (admin is required)',value ='G!dm @user (msg)',inline = False)
-            embed.add_field(name = 'G!setw (admin is required)',value ='G!setw',inline = False)
-            embed.add_field(name = 'G!setuplog (admin is required)',value =' G!setuplog',inline = False)
-            embed.add_field(name = 'G!getuser (mod or admin is required)',value =' G!getuser (rolename)',inline = False)
             embed.add_field(name = 'G!userinfo (mod or admin is required)',value =' G!userinfo @user',inline = False)
             embed.add_field(name = 'G!roleinfo (mod or admin is required)',value =' G!roleinfo (rolename)',inline = False)
-            embed.add_field(name = 'G!rolecolor (mod or admin is required)',value ='use it like G!rolecolor (rolename) (hex code)',inline = False)
-            embed.add_field(name = 'G!role (mod or admin is required)',value =' G!role @user (rolename)',inline = False)
-            embed.add_field(name = 'G!warn (mod or admin is required)', value ='G!warn @user (reason)',inline = False)
             embed.add_field(name = 'G!virus', value =' G!virus @user',inline = False)
-            embed.add_field(name = 'G!invites', value ='G!invites or G!invites @user',inline = False)
-            embed.add_field(name = 'G!tweet', value ='G!tweet (name) (msg)',inline = False)
             embed.add_field(name = 'G!announce (admin is required)', value =' G!announce #channel (msg)',inline = False)
-            embed.add_field(name = 'G!addchannel (admin is required)', value =' G!addchannel (name)',inline = False)
-            embed.add_field(name = 'G!delchannel (admin is required', value ='G!delchannel or n!delchannel #channelname',inline = False)
-            embed.add_field(name = 'G!mute (mod or admin is required and must have log setup or automute will not work)', value ='A!mute @user (mute time)',inline = False)
             embed.add_field(name = 'G!meme', value ='G!meme',inline = False)
-            embed.add_field(name = 'G!avatar', value ='G!avatar or n!avatar @user',inline = False)
+            embed.add_field(name = 'G!avatar', value ='G!avatar @user',inline = False)
             embed.add_field(name = 'G!flipcoin', value ='G!flipcoin',inline = False)
-            embed.add_field(name = 'G!unmute (mod or admin is required)', value ='G!unmute @user',inline = False)
             await client.send_message(user,embed=embed)
      if reaction.emoji == '🇲':
            r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -410,16 +395,13 @@ async def on_reaction_add(reaction, user):
            embed.add_field(name = 'G!unban (mod or admin is required)', value ='G!unban @user',inline = False)
            embed.add_field(name = 'G!bans (admin is required)', value =' G!bans',inline = False)
            embed.add_field(name = 'G!serverinfo', value =' G!serverinfo',inline = False)
-           embed.add_field(name = 'G!membercount(admin is required)', value ='G!membercount',inline = False)
-           embed.add_field(name = 'G!happybday', value ='G!happybday to send a happy birthday message to someone',inline = False)            
-           embed.add_field(name = 'G!slap', value ='G!slap @user',inline = False)
+           embed.add_field(name = 'G!membercount(admin is required)', value ='G!membercount',inline = False)     
            embed.add_field(name = 'G!damn', value ='gif command',inline = False)
            embed.add_field(name = 'G!burned', value ='gif command',inline = False)
            embed.add_field(name = 'G!savage', value ='gif command',inline = False)
            embed.add_field(name = 'G!thuglife', value ='gif command',inline = False)
            embed.add_field(name = 'G!google', value ='G!google (name)',inline = False)
            embed.add_field(name = 'G!rps', value ='G!rps (rock,paper,scissors) choose one',inline = False)
-           embed.add_field(name = 'G!kick (mod or admin is required', value ='G!kick @user',inline = False)
            embed.add_field(name = 'G!hug', value ='G!hug @user',inline = False)
            embed.add_field(name = 'G!joke', value ='G!joke',inline = False)
            embed.add_field(name = 'G!rolldice', value ='G!rolldice (1 -6) choose one',inline = False)
@@ -430,22 +412,10 @@ async def on_reaction_add(reaction, user):
            embed.set_author(name='Help3')
            embed.set_image(url = 'https://image.ibb.co/caM2BK/help.gif')    
            embed.add_field(name = 'G!invite', value ='G!invite',inline = False)
-           embed.add_field(name = 'G!say', value ='G!say (msg)',inline = False)
            embed.add_field(name = 'G!remind', value ='G!remind (time in seconds)',inline = False)
            embed.add_field(name = 'G!mention (admin is required)', value ='G!mention (rolename) (msg if you want)',inline = False)
            embed.add_field(name = 'G!ownerinfo', value ='G!ownerinfo',inline = False)
-           embed.add_field(name = 'G!poll', value =' type G!poll and it will send a message of how to use poll',inline = False)
-           embed.add_field(name = 'G!rank',value = 'type G!rank and it will show you your rank according to it',inline = False)
-           embed.add_field(name = 'G!server', value ='G!server to get link to the support server',inline = False)
-           embed.add_field(name = 'G!play', value ='G!play (url or name)',inline = False)
-           embed.add_field(name = 'G!stop', value ='G!stop to stop the music',inline = False)
-           embed.add_field(name = 'G!queue', value ='G!queue to see the queue',inline = False)
-           embed.add_field(name = 'G!np', value ='G!np to see the current song',inline = False)
-           embed.add_field(name = 'G!volume', value ='G!volume or n!volume (sound amount)',inline = False)
-           embed.add_field(name = 'G!pause', value ='G!pause',inline = False)
-           embed.add_field(name = 'G!resume', value ='G!resume',inline = False)
-           embed.add_field(name = 'G!skip', value ='G!skip to skip the current song',inline = False)
-           embed.add_field(name = 'G!movie', value = 'G!movie to play a movie',inline = False)        
+   
 def is_owner(ctx):
      return ctx.message.author.id in ["442592011585978369"]
         
@@ -463,7 +433,7 @@ async def ping(ctx):
 @client.command(pass_context = True)
 async def userinfo(ctx, user: discord.Member=None):
     if user is None:
-      await client.say('Please tag a user to get user information. Example- ``A!userinfo @user``')
+      await client.say('Please tag a user to get user information. Example- ``G!userinfo @user``')
     if ctx.message.author.bot:
       return
     if ctx.message.author.server_permissions.kick_members == False:
